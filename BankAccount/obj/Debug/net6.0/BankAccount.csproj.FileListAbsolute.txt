@@ -1,0 +1,15 @@
+C:\Users\Brave\Desktop\Aurionpro_training\Assignments\15\BankAccount\bin\Debug\net6.0\BankAccount.exe
+C:\Users\Brave\Desktop\Aurionpro_training\Assignments\15\BankAccount\bin\Debug\net6.0\BankAccount.deps.json
+C:\Users\Brave\Desktop\Aurionpro_training\Assignments\15\BankAccount\bin\Debug\net6.0\BankAccount.runtimeconfig.json
+C:\Users\Brave\Desktop\Aurionpro_training\Assignments\15\BankAccount\bin\Debug\net6.0\BankAccount.dll
+C:\Users\Brave\Desktop\Aurionpro_training\Assignments\15\BankAccount\bin\Debug\net6.0\BankAccount.pdb
+C:\Users\Brave\Desktop\Aurionpro_training\Assignments\15\BankAccount\obj\Debug\net6.0\BankAccount.csproj.AssemblyReference.cache
+C:\Users\Brave\Desktop\Aurionpro_training\Assignments\15\BankAccount\obj\Debug\net6.0\BankAccount.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Brave\Desktop\Aurionpro_training\Assignments\15\BankAccount\obj\Debug\net6.0\BankAccount.AssemblyInfoInputs.cache
+C:\Users\Brave\Desktop\Aurionpro_training\Assignments\15\BankAccount\obj\Debug\net6.0\BankAccount.AssemblyInfo.cs
+C:\Users\Brave\Desktop\Aurionpro_training\Assignments\15\BankAccount\obj\Debug\net6.0\BankAccount.csproj.CoreCompileInputs.cache
+C:\Users\Brave\Desktop\Aurionpro_training\Assignments\15\BankAccount\obj\Debug\net6.0\BankAccount.dll
+C:\Users\Brave\Desktop\Aurionpro_training\Assignments\15\BankAccount\obj\Debug\net6.0\refint\BankAccount.dll
+C:\Users\Brave\Desktop\Aurionpro_training\Assignments\15\BankAccount\obj\Debug\net6.0\BankAccount.pdb
+C:\Users\Brave\Desktop\Aurionpro_training\Assignments\15\BankAccount\obj\Debug\net6.0\BankAccount.genruntimeconfig.cache
+C:\Users\Brave\Desktop\Aurionpro_training\Assignments\15\BankAccount\obj\Debug\net6.0\ref\BankAccount.dll

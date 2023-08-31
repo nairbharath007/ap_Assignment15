@@ -18,10 +18,14 @@ namespace MovieStoreAppWithLists.Model
         public void AddMovie(Movie movie)
         {
             movies.Add(movie);
-            Console.WriteLine("Movie added successfully!");
+            //Console.WriteLine("Movie added successfully!");
         }
 
-        public void DisplayAllMovies()
+        public List<Movie> GetAllMovies()
+        {
+            return movies;
+        }
+        /*public void DisplayAllMovies()
         {
             if (movies.Count == 0)
             {
@@ -34,42 +38,25 @@ namespace MovieStoreAppWithLists.Model
             {
                 Console.WriteLine(movie.ToString());
             }
-        }
+        }*/
 
-        public void FindMovieByYear(int year)
+        public List<Movie> FindMoviesByYear(int year)
         {
-            List<Movie> foundMovies = movies.FindAll(movie => movie.Year == year);
-            if (foundMovies.Count == 0)
-            {
-                Console.WriteLine($"No movies found for the year {year}.");
-                return;
-            }
-
-            Console.WriteLine($"Movies from the year {year}:");
-            foreach (Movie movie in foundMovies)
-            {
-                Console.WriteLine(movie.ToString());
-            }
+            return movies.FindAll(movie => movie.Year == year);
         }
 
         public void RemoveMovieByName(string name)
         {
-            Movie movieToRemove = movies.Find(movie => movie.MovieName.Equals(name, StringComparison.OrdinalIgnoreCase));
+            Movie movieToRemove = movies.Find(movie => movie.MovieName.Equals(name));
             if (movieToRemove != null)
             {
                 movies.Remove(movieToRemove);
-                Console.WriteLine($"Movie '{name}' removed successfully!");
-            }
-            else
-            {
-                Console.WriteLine($"Movie '{name}' not found.");
             }
         }
 
         public void ClearList()
         {
             movies.Clear();
-            Console.WriteLine("All movies removed from the store.");
         }
     }
 }

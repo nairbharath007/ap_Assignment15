@@ -20,5 +20,10 @@ namespace MovieStoreAppWithLists.Model
             Year = year;
             Director = director;
         }
+
+        public override string ToString()
+        {
+            return $"ID: {MovieId}, Name: {MovieName}, Year: {Year}, Director: {Director}";
+        }
     }
 }

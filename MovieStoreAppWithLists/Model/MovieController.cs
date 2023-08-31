@@ -22,19 +22,27 @@ namespace MovieStoreAppWithLists.Model
                 Console.WriteLine("The movie list is full (maximum 5 movies).");
                 return null;
             }
-            Console.Write("Enter Movie ID: ");
-            int movieId = int.Parse(Console.ReadLine());
+            try
+            {
+                Console.Write("Enter Movie ID: ");
+                int movieId = int.Parse(Console.ReadLine());
 
-            Console.Write("Enter Movie Name: ");
-            string movieName = Console.ReadLine();
+                Console.Write("Enter Movie Name: ");
+                string movieName = Console.ReadLine();
 
-            Console.Write("Enter Year: ");
-            int year = int.Parse(Console.ReadLine());
+                Console.Write("Enter Year: ");
+                int year = int.Parse(Console.ReadLine());
 
-            Console.Write("Enter Director: ");
-            string director = Console.ReadLine();
+                Console.Write("Enter Director: ");
+                string director = Console.ReadLine();
 
-            return new Movie(movieId, movieName, year, director);
+                return new Movie(movieId, movieName, year, director);
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Invalid input. Please enter a valid number.");
+                return null;
+            }
         }
 
         public void Start()
@@ -53,13 +61,31 @@ namespace MovieStoreAppWithLists.Model
                         Movie newMovie = SetMovieDetails();
                         if (newMovie != null)
                         {
-                            manager.AddMovie(newMovie);
-                            Console.WriteLine("Movie added successfully!");
+                            bool addedSuccessfully = manager.AddMovie(newMovie);
+                            if (addedSuccessfully)
+                            {
+                                Console.WriteLine("Movie added successfully!");
+                            }
+                            else
+                            {
+                                Console.WriteLine("The movie list is full (maximum 5 movies).");
+                            }
                         }
                         break;
                     case 3:
                         Console.Write("Enter the year to find movies: ");
-                        int searchYear = int.Parse(Console.ReadLine());
+                        int searchYear;
+
+                        try
+                        {
+                            searchYear = int.Parse(Console.ReadLine());
+                        }
+                        catch (FormatException)
+                        {
+                            Console.WriteLine("Invalid input. Please enter a valid number.");
+                            continue;
+                        }
+
                         List<Movie> foundMovies = manager.FindMoviesByYear(searchYear);
                         DisplayMovies(foundMovies);
                         break;
@@ -71,6 +97,7 @@ namespace MovieStoreAppWithLists.Model
                         break;
                     case 5:
                         manager.ClearList();
+                        Console.WriteLine("All movies removed from the store.");
                         break;
                     case 6:
                         Environment.Exit(0);

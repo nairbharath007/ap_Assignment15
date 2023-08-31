@@ -15,10 +15,15 @@ namespace MovieStoreAppWithLists.Model
             movies = new List<Movie>();
         }
 
-        public void AddMovie(Movie movie)
+        public bool AddMovie(Movie movie)
         {
+            if (movies.Count >= 5)
+            {
+                return false; 
+            }
+
             movies.Add(movie);
-            //Console.WriteLine("Movie added successfully!");
+            return true; 
         }
 
         public List<Movie> GetAllMovies()

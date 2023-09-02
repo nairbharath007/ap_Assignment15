@@ -45,6 +45,8 @@ namespace MovieStoreAppWithLists.Model
             }
         }*/
 
+
+
         public List<Movie> FindMoviesByYear(int year)
         {
             return movies.FindAll(movie => movie.Year == year);
@@ -62,6 +64,38 @@ namespace MovieStoreAppWithLists.Model
         public void ClearList()
         {
             movies.Clear();
+        }
+
+        public string GetAllMoviesFormatted()
+        {
+            if (movies.Count == 0)
+            {
+                return "No movies found.";
+            }
+
+            string formattedMovies = "List of movies:\n";
+            foreach (Movie movie in movies)
+            {
+                formattedMovies += movie.ToString() + "\n";
+            }
+
+            return formattedMovies;
+        }
+
+        public string GetMoviesFormatted(List<Movie> moviesToDisplay)
+        {
+            if (moviesToDisplay.Count == 0)
+            {
+                return "No movies found.";
+            }
+
+            string formattedMovies = "List of movies:\n";
+            foreach (Movie movie in moviesToDisplay)
+            {
+                formattedMovies += movie.ToString() + "\n";
+            }
+
+            return formattedMovies;
         }
     }
 }

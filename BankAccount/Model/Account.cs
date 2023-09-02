@@ -32,10 +32,17 @@ namespace BankAccount.Model
 
         public void Withdraw(double amount)
         {
-            if (Balance - amount >= 500)
-                Balance -= amount;
+            double minBalance = 500; 
+            double potentialBalance = Balance - amount;
+
+            if (potentialBalance >= minBalance)
+            {
+                Balance = potentialBalance;
+            }
             else
+            {
                 Console.WriteLine("Insufficient balance.");
+            }
         }
 
         public double CheckBalance()

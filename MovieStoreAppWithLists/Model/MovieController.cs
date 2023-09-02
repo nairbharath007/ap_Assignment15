@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MovieStoreAppWithLists.Model
 {
-     class MovieController
+    class MovieController
     {
         private MovieManager manager;
 
@@ -19,9 +19,9 @@ namespace MovieStoreAppWithLists.Model
         {
             if (manager.GetAllMovies().Count >= 5)
             {
-                Console.WriteLine("The movie list is full (maximum 5 movies).");
                 return null;
             }
+
             try
             {
                 Console.Write("Enter Movie ID: ");
@@ -40,7 +40,6 @@ namespace MovieStoreAppWithLists.Model
             }
             catch (FormatException)
             {
-                Console.WriteLine("Invalid input. Please enter a valid number.");
                 return null;
             }
         }
@@ -50,12 +49,22 @@ namespace MovieStoreAppWithLists.Model
             while (true)
             {
                 DisplayMenu();
-                int choice = int.Parse(Console.ReadLine());
+                int choice;
+
+                try
+                {
+                    choice = int.Parse(Console.ReadLine());
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("Invalid input. Please enter a valid number.");
+                    continue;
+                }
 
                 switch (choice)
                 {
                     case 1:
-                        DisplayAllMovies();
+                        Console.WriteLine(manager.GetAllMoviesFormatted());
                         break;
                     case 2:
                         Movie newMovie = SetMovieDetails();
@@ -86,8 +95,7 @@ namespace MovieStoreAppWithLists.Model
                             continue;
                         }
 
-                        List<Movie> foundMovies = manager.FindMoviesByYear(searchYear);
-                        DisplayMovies(foundMovies);
+                        Console.WriteLine(manager.GetMoviesFormatted(manager.FindMoviesByYear(searchYear)));
                         break;
                     case 4:
                         Console.Write("Enter the name of the movie to remove: ");
@@ -109,27 +117,6 @@ namespace MovieStoreAppWithLists.Model
             }
         }
 
-        public void DisplayAllMovies()
-        {
-            List<Movie> allMovies = manager.GetAllMovies();
-            DisplayMovies(allMovies);
-        }
-
-        public void DisplayMovies(List<Movie> moviesToDisplay)
-        {
-            if (moviesToDisplay.Count == 0)
-            {
-                Console.WriteLine("No movies found.");
-                return;
-            }
-
-            Console.WriteLine("List of movies:");
-            foreach (Movie movie in moviesToDisplay)
-            {
-                Console.WriteLine(movie.ToString());
-            }
-        }
-
         public void DisplayMenu()
         {
             Console.WriteLine("\nMovie Store Menu");
@@ -141,6 +128,5 @@ namespace MovieStoreAppWithLists.Model
             Console.WriteLine("6. Exit");
             Console.Write("Enter your choice: ");
         }
-
     }
 }

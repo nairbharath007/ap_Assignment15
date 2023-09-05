@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Brave\\Desktop\\Aurionpro_training\\Assignments\\15\\BankAccount\\BankAccount.csproj": {}
+    "C:\\Users\\acer\\Desktop\\Aurionpro\\Training\\Assignments\\15\\BankAccount\\BankAccount.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Brave\\Desktop\\Aurionpro_training\\Assignments\\15\\BankAccount\\BankAccount.csproj": {
+    "C:\\Users\\acer\\Desktop\\Aurionpro\\Training\\Assignments\\15\\BankAccount\\BankAccount.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Brave\\Desktop\\Aurionpro_training\\Assignments\\15\\BankAccount\\BankAccount.csproj",
+        "projectUniqueName": "C:\\Users\\acer\\Desktop\\Aurionpro\\Training\\Assignments\\15\\BankAccount\\BankAccount.csproj",
         "projectName": "BankAccount",
-        "projectPath": "C:\\Users\\Brave\\Desktop\\Aurionpro_training\\Assignments\\15\\BankAccount\\BankAccount.csproj",
-        "packagesPath": "C:\\Users\\Brave\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Brave\\Desktop\\Aurionpro_training\\Assignments\\15\\BankAccount\\obj\\",
+        "projectPath": "C:\\Users\\acer\\Desktop\\Aurionpro\\Training\\Assignments\\15\\BankAccount\\BankAccount.csproj",
+        "packagesPath": "C:\\Users\\acer\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\acer\\Desktop\\Aurionpro\\Training\\Assignments\\15\\BankAccount\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Brave\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
